@@ -1,0 +1,1 @@
+Drop your .mp3 files into this folder. After pushing to GitHub, the included workflow updates music/tracks.json automatically.
