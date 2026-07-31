@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#06152a">
+  <title>ACFA Sidebar Academy | Advanced Sidebar Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="code-rain" id="codeRain"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+  </div>
+
+  <main class="shell">
+    <header class="hero panel reveal">
+      <div class="logo-wrap">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <img src="assets/images/acfa-logo.jpeg" alt="ACFA crest" class="club-logo">
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">ADVANCED GITHUB-HOSTED EXAMPLE</p>
+        <h1>ACFA Sidebar Academy</h1>
+        <p class="tagline">Learn • Build • Create • Improve</p>
+        <div class="hero-actions">
+          <a class="button gold" href="https://www.chess.com/club/and-chess-for-all-official/join" target="_blank" rel="noopener">Join ACFA</a>
+          <a class="button ghost" href="#showcase">Explore Features</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="ticker panel" aria-label="Academy announcement">
+      <div class="ticker-track">
+        <span>💻 Welcome to ACFA Sidebar Academy</span>
+        <span>♟ Learn HTML and CSS</span>
+        <span>⚙ Build responsive club dashboards</span>
+        <span>📻 Add media and interactive components</span>
+        <span>🚀 Publish with GitHub Pages</span>
+        <span>💻 Welcome to ACFA Sidebar Academy</span>
+        <span>♟ Learn HTML and CSS</span>
+        <span>⚙ Build responsive club dashboards</span>
+      </div>
+    </div>
+
+    <section class="quick-grid">
+      <article class="panel stat-card reveal">
+        <p class="label">CURRENT TIME</p>
+        <strong id="clock">--:--</strong>
+        <span id="dateLabel">Loading date…</span>
+      </article>
+      <article class="panel stat-card reveal">
+        <p class="label">ACADEMY STATUS</p>
+        <strong class="online">ONLINE</strong>
+        <span>All systems ready</span>
+      </article>
+      <article class="panel stat-card reveal">
+        <p class="label">MEMBER GOAL</p>
+        <strong><span id="memberCountTop">16</span>/100</strong>
+        <span>Building together</span>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel section-card reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">COMMUNITY GROWTH</p><h2>Member Progress</h2></div>
+          <span class="badge" id="progressBadge">16%</span>
+        </div>
+        <p class="muted"><strong id="memberCountText">16 members</strong> toward our first 100-member milestone.</p>
+        <div class="progress-shell" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="16">
+          <div class="progress-fill" id="progressFill"><span id="progressText">16%</span></div>
+        </div>
+        <div class="progress-meta"><span>0</span><span id="remainingText">84 remaining</span><span>100</span></div>
+      </article>
+
+      <article class="panel section-card reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">WELCOME BOARD</p><h2>Newest Members</h2></div>
+          <span class="badge">LIVE API</span>
+        </div>
+        <div id="memberBoard" class="member-list"></div>
+        <p class="edit-note">Newest members and the total member count load automatically from the Chess.com Public API.</p>
+      </article>
+    </section>
+
+    <section class="content-grid calendar-radio-grid">
+      <article class="panel section-card reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">ACADEMY SCHEDULE</p><h2 id="calendarTitle">Calendar</h2></div>
+          <div class="calendar-controls">
+            <button id="prevMonth" aria-label="Previous month">‹</button>
+            <button id="todayMonth">Today</button>
+            <button id="nextMonth" aria-label="Next month">›</button>
+          </div>
+        </div>
+        <div class="calendar" id="calendar"></div>
+        <div class="event-list" id="eventList"></div>
+      </article>
+
+      <article class="panel radio-card reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">ACFA RADIO</p><h2>Academy Sound Lab</h2></div>
+          <span class="status-dot" title="Radio ready"></span>
+        </div>
+        <img src="assets/images/acfa-radio.jpeg" class="radio-art" alt="ACFA Radio artwork">
+        <div class="now-playing">
+          <div class="equalizer" id="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div><span>NOW PLAYING</span><strong id="trackTitle">Add MP3 files to begin</strong></div>
+        </div>
+        <audio id="audio" preload="metadata"></audio>
+        <div class="radio-controls">
+          <button id="prevTrack" aria-label="Previous track">⏮</button>
+          <button id="playPause" class="play" aria-label="Play or pause">▶</button>
+          <button id="nextTrack" aria-label="Next track">⏭</button>
+        </div>
+        <div class="seek-row"><span id="currentTime">0:00</span><input id="seek" type="range" min="0" max="100" value="0"><span id="duration">0:00</span></div>
+        <select id="playlistSelect" aria-label="Choose a track"><option>No tracks found</option></select>
+        <p class="edit-note">Drop MP3 files into <code>assets/music</code>. GitHub Actions rebuilds the playlist automatically.</p>
+      </article>
+    </section>
+
+    <section class="panel showcase-card reveal" id="showcase">
+      <div class="section-heading">
+        <div><p class="eyebrow">ADVANCED FEATURES SHOWCASE</p><h2>Built Beyond Basic HTML</h2></div>
+        <span class="badge">LIVE DEMO</span>
+      </div>
+      <div class="showcase-grid">
+        <div><span>✦</span><strong>CSS Animations</strong><p>Orbiting logo, ticker movement, particles, reveals, and equalizer motion.</p></div>
+        <div><span>▦</span><strong>CSS Grid</strong><p>Responsive dashboard panels automatically reorganize for smaller screens.</p></div>
+        <div><span>⚙</span><strong>JavaScript Widgets</strong><p>Live clock, calendar controls, member data, and radio logic run in the browser.</p></div>
+        <div><span>◫</span><strong>JSON Configuration</strong><p>The club URL, fallback data, goals, events, and code tips are maintained in one simple file.</p></div>
+        <div><span>♫</span><strong>Expandable Radio</strong><p>Drop MP3 files into the music folder and GitHub Actions rebuilds the playlist.</p></div>
+        <div><span>◈</span><strong>Local Storage</strong><p>The visitor’s selected visual theme remains saved on their device.</p></div>
+      </div>
+    </section>
+
+    <section class="content-grid learning-grid">
+      <article class="panel section-card reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">CODE OF THE DAY</p><h2>Academy Tip</h2></div>
+          <button class="tip-button" id="nextTip" type="button">Next Tip</button>
+        </div>
+        <div class="code-tip">
+          <span id="tipLabel">CSS</span>
+          <code id="tipCode">Loading tip…</code>
+          <p id="tipExplanation"></p>
+        </div>
+      </article>
+
+      <article class="panel section-card reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">VISUAL SETTINGS</p><h2>Theme Switcher</h2></div>
+          <span class="badge">SAVED</span>
+        </div>
+        <p class="muted">Choose a dashboard style. Your selection is remembered automatically.</p>
+        <div class="theme-switcher" role="group" aria-label="Choose a theme">
+          <button type="button" data-theme="default">ACFA Blue</button>
+          <button type="button" data-theme="matrix">Matrix</button>
+          <button type="button" data-theme="gold">ACFA Gold</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel academy-map reveal">
+      <p class="eyebrow">ADVANCED SIDEBAR COMPONENTS</p>
+      <h2>What This Example Demonstrates</h2>
+      <div class="feature-grid">
+        <div><span>01</span><strong>Responsive Layout</strong><p>Works inside desktop and mobile embeds.</p></div>
+        <div><span>02</span><strong>Dynamic Calendar</strong><p>Generated with JavaScript from configuration data.</p></div>
+        <div><span>03</span><strong>Expandable Radio</strong><p>Playlist generated from MP3 files in the repository.</p></div>
+        <div><span>04</span><strong>Editable Data</strong><p>Members, events, goals, and text live in one config file.</p></div>
+      </div>
+    </section>
+
+    <footer class="footer panel">
+      <img src="assets/images/acfa-logo.jpeg" alt="" aria-hidden="true">
+      <div><strong>© 2026 And Chess For All</strong><span>Every Player Belongs • Every Move Matters</span></div>
+      <a href="https://www.chess.com/club/and-chess-for-all-official" target="_blank" rel="noopener">Visit ACFA</a>
+    </footer>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
